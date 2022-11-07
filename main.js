@@ -14,6 +14,9 @@ const onClickHandler = ()=>{
    }else if(billAmountValue<0||cashGivenValue<0){
     document.querySelector(".error-message").innerText = "Input Value cannot be negative"
       
+   }else if(billAmountValue<cashGivenValue){
+    document.querySelector(".error-message").innerText = "Cash given cannot be less than bill amount"
+
    }
    else if(billAmountValue===cashGivenValue){
     document.querySelector(".error-message").innerText = "No change needed to be given"
