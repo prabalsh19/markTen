@@ -10,7 +10,7 @@ const onClickHandler = ()=>{
    let cashGivenValue = cashGiven.value;
 
    if(billAmountValue===''||cashGivenValue===''){
-    document.querySelector(".error-message").innerText = "Invalid Input"
+    document.querySelector(".error-message").innerText = "Input values cannot be empty."
    }else if(billAmountValue<0||cashGivenValue<0){
     document.querySelector(".error-message").innerText = "Input Value cannot be negative"
       
