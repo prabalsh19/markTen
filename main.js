@@ -4,7 +4,7 @@ const checkBtn = document.querySelector(".check-btn")
 const noOfNotes = document.querySelectorAll(".no-of-notes")
 const nextBtn = document.querySelector(".next-btn")
 const show = document.querySelectorAll(".display-none")
-
+const errMsg = document.querySelector(".error-message")
 const availableNotes = [2000,500,100,20,10,5,1]
 const onNextClickHandler = ()=>{
   nextBtn.style.display = 'none'
@@ -18,24 +18,28 @@ const onCheckClickHandler = ()=>{
   let cashGivenValue = cashGiven.value;
   let extraAmount = cashGivenValue - billAmountValue;
    if(billAmountValue===''||cashGivenValue===''){
-    document.querySelector(".error-message").innerText = "Input values cannot be empty."
+    errMsg.innerText = "Input values cannot be empty."
+ show[3].style.display = 'none'
       
    }else if(billAmountValue<0||cashGivenValue<0){
-    document.querySelector(".error-message").innerText = "Input Value cannot be negative"
+   errMsg.innerText = "Input Value cannot be negative"
+ show[3].style.display = 'none'
       
-   }else if(billAmountValue>cashGivenValue){
+   }else if(Number(billAmountValue)>Number(cashGivenValue)){
       console.log(billAmountValue,cashGivenValue);
-    document.querySelector(".error-message").innerText = "Cash given cannot be less than bill amount"
+   errMsg.innerText = "Cash given cannot be less than bill amount"
+ show[3].style.display = 'none'
 
    }
    else if(billAmountValue===cashGivenValue){
-    document.querySelector(".error-message").innerText = "No change needed to be given"
+   errMsg.innerText = "No change needed to be given"
+ show[3].style.display = 'none'
       
    }
    else{
       console.log(billAmountValue,cashGivenValue);
 
-    document.querySelector(".error-message").innerText = "";
+   errMsg.innerText = "";
     
     calculateAmount(extraAmount)
  show[3].style.display = 'table'
