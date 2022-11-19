@@ -12,7 +12,7 @@ input {
   display: block;
   height: 1.8rem;
   width: 300px;
-  margin: 0.5rem auto 2rem;
+  margin: 0.5rem auto 1rem;
   border: 1px solid #ce6857;
   border-radius: 0.3rem;
 }
@@ -34,6 +34,11 @@ td {
   border-collapse: collapse;
   padding: 0.4rem;
 }
+footer {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
 .hero-txt {
   margin: 3rem auto;
   text-align: center;
@@ -45,7 +50,10 @@ td {
   width: 600px;
   margin: auto;
 }
-.check-btn {
+.check-btn,
+.next-btn {
+  display: block;
+  margin: auto;
   border: none;
   padding: 0.5rem 1.5rem;
   background-color: #c5eaf4;
@@ -54,7 +62,11 @@ td {
   border: 0.1px solid #61a6ab;
   margin-bottom: 1rem;
 }
-.check-btn:hover {
+.check-btn:hover,
+.next-btn:hover {
   background-color: #aee2f1;
   cursor: pointer;
+}
+.display-none {
+  display: none;
 }

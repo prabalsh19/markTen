@@ -18,12 +18,14 @@
     <div class="actions">
       <label for="bill-amount">Bill Amount</label>
       <input id="bill-amount" type="number" />
-      <label for="cash-given">Cash Given</label>
-      <input id="cash-given" type="number" />
-      <button class="check-btn">Check</button>
+      <button class="next-btn">Next</button>
+
+      <label class="display-none" for="cash-given">Cash Given</label>
+      <input class="display-none" id="cash-given" type="number" />
+      <button class="check-btn display-none">Check</button>
       <p class="error-message"></p>
     </div>
-    <table>
+    <table class="display-none">
       <caption>
         Return Change
       </caption>
